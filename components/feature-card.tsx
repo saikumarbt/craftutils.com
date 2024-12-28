@@ -12,14 +12,12 @@ export function FeatureCard({ title, description, icon: Icon, href }: FeatureCar
   return (
     <Link 
       href={href}
-      className="group relative overflow-hidden rounded-xl border bg-background p-6 hover:border-primary transition-colors duration-200"
+      className="group relative overflow-hidden rounded-lg border p-6 hover:border-primary transition-colors"
     >
-      <div className="flex flex-col gap-4">
-        <Icon className="h-8 w-8 text-primary transition-transform duration-200 group-hover:scale-110" />
+      <div className="flex items-center gap-4">
+        <Icon className="h-8 w-8 text-primary" />
         <div>
-          <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors duration-200">
-            {title}
-          </h3>
+          <h3 className="font-semibold">{title}</h3>
           <p className="text-sm text-muted-foreground">{description}</p>
         </div>
       </div>
